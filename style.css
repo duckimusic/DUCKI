@@ -1,2 +1,529 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#0a0a0a;color:#f2f0e9;font-family:"Space Grotesk",sans-serif}.noise{position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");z-index:5}header{height:82px;border-bottom:1px solid #2a2a2a;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;position:relative;z-index:2}.logo{font-weight:700;font-size:22px;color:#fff;text-decoration:none;letter-spacing:-1px}.logo span{font:10px "DM Mono";vertical-align:top;margin-left:3px}.nav,.eyebrow,small,.section-title span,footer{font:12px "DM Mono",monospace;letter-spacing:.08em;color:#aaa}.nav{color:#fff;text-decoration:none;border-bottom:1px solid #fff;padding-bottom:3px}.hero{min-height:78vh;padding:10vh 5vw 9vh;border-bottom:1px solid #2a2a2a;display:flex;flex-direction:column;justify-content:center}.eyebrow{margin-bottom:25px}.hero h1{font-size:clamp(80px,17vw,230px);line-height:.78;letter-spacing:-.09em;margin:0;font-weight:700}.hero h1 i{font-style:normal;-webkit-text-stroke:1px #f2f0e9;color:transparent}.hero p{max-width:470px;font-size:18px;line-height:1.45;color:#aaa;margin:55px 0 30px}.cta{width:max-content;color:#0a0a0a;background:#f2f0e9;text-decoration:none;padding:17px 22px;font:12px "DM Mono";font-weight:500}.cta span{margin-left:45px}.info{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid #2a2a2a}.info>div{padding:45px 5vw 55px;border-right:1px solid #2a2a2a}.info>div:last-child{border:0}.info h2{font-size:15px;margin:35px 0 14px}.info p{color:#999;line-height:1.55;max-width:300px}.submission{max-width:900px;margin:0 auto;padding:100px 5vw}.section-title{margin-bottom:55px}.section-title h2{font-size:clamp(50px,9vw,100px);letter-spacing:-.07em;margin:15px 0 0}.submission form{display:flex;flex-direction:column;gap:28px}label{font:11px "DM Mono";color:#aaa;display:flex;flex-direction:column;gap:9px}input,select,textarea{width:100%;border:0;border-bottom:1px solid #444;background:transparent;color:#fff;padding:13px 0;font:17px "Space Grotesk";outline:0;border-radius:0}input:focus,select:focus,textarea:focus{border-color:#fff}select{appearance:none}option{background:#111}.grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}.check{flex-direction:row;align-items:center;gap:10px}.check input{width:auto}.submission button{margin-top:10px;border:0;background:#f2f0e9;color:#080808;padding:19px 22px;text-align:left;font:12px "DM Mono";cursor:pointer}.submission button span{float:right;margin-left:80px}.success{border:1px solid #444;padding:50px}.success>span{font-size:35px;font-weight:700}.success p{color:#aaa;line-height:1.5}.success button{margin-top:25px}footer{border-top:1px solid #2a2a2a;padding:25px 5vw;display:flex;justify-content:space-between}@media(max-width:700px){.info{grid-template-columns:1fr}.info>div{border-right:0;border-bottom:1px solid #2a2a2a}.grid{grid-template-columns:1fr;gap:28px}.hero{min-height:70vh}.hero p{margin-top:45px}}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: #f2f0e9;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+
+/* =========================
+   NOISE
+========================= */
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .035;
+
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+
+  z-index: 10;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  height: 82px;
+
+  border-bottom: 1px solid #2a2a2a;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 5vw;
+
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+
+  text-decoration: none;
+
+  letter-spacing: -1px;
+}
+
+.logo span {
+  font: 10px "DM Mono";
+  vertical-align: top;
+  margin-left: 3px;
+}
+
+.nav,
+.eyebrow,
+small,
+.section-title span,
+footer {
+  font: 12px "DM Mono", monospace;
+  letter-spacing: .08em;
+  color: #aaa;
+}
+
+.nav {
+  color: #fff;
+  text-decoration: none;
+
+  border-bottom: 1px solid #fff;
+
+  padding-bottom: 3px;
+
+  transition: opacity .3s ease;
+}
+
+.nav:hover {
+  opacity: .5;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 82vh;
+
+  padding: 10vh 5vw 9vh;
+
+  border-bottom: 1px solid #2a2a2a;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-size: clamp(76px, 16vw, 220px);
+
+  line-height: .78;
+
+  letter-spacing: -.09em;
+
+  margin: 0;
+
+  font-weight: 700;
+}
+
+.hero h1 i {
+  font-style: normal;
+
+  -webkit-text-stroke: 1px #f2f0e9;
+
+  color: transparent;
+}
+
+.hero p {
+  max-width: 480px;
+
+  font-size: 18px;
+
+  line-height: 1.5;
+
+  color: #999;
+
+  margin: 55px 0 30px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+  width: max-content;
+
+  color: #0a0a0a;
+
+  background: #f2f0e9;
+
+  text-decoration: none;
+
+  padding: 18px 22px;
+
+  font: 12px "DM Mono";
+
+  font-weight: 500;
+
+  transition:
+    transform .45s cubic-bezier(.16, 1, .3, 1),
+    opacity .3s ease;
+}
+
+.cta span {
+  margin-left: 55px;
+}
+
+.cta:hover {
+  opacity: .9;
+}
+
+
+/* =========================
+   INFO
+========================= */
+
+.info {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.info > div {
+  padding: 50px 5vw 60px;
+
+  border-right: 1px solid #2a2a2a;
+
+  transition:
+    background .5s ease,
+    transform .5s cubic-bezier(.16, 1, .3, 1);
+}
+
+.info > div:last-child {
+  border: 0;
+}
+
+.info > div:hover {
+  background: #101010;
+}
+
+.info h2 {
+  font-size: 15px;
+
+  margin: 38px 0 15px;
+}
+
+.info p {
+  color: #999;
+
+  line-height: 1.6;
+
+  max-width: 300px;
+
+  margin: 0;
+}
+
+
+/* =========================
+   SUBMISSION
+========================= */
+
+.submission {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 120px 5vw;
+}
+
+.section-title {
+  margin-bottom: 65px;
+}
+
+.section-title h2 {
+  font-size: clamp(52px, 8vw, 95px);
+
+  line-height: .9;
+
+  letter-spacing: -.07em;
+
+  margin: 18px 0 0;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.submission form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+label {
+  font: 11px "DM Mono";
+
+  color: #aaa;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+
+  border: 0;
+
+  border-bottom: 1px solid #444;
+
+  background: transparent;
+
+  color: #fff;
+
+  padding: 14px 0;
+
+  font: 17px "Space Grotesk";
+
+  outline: 0;
+
+  border-radius: 0;
+
+  transition:
+    border-color .3s ease,
+    padding-left .3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #fff;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #555;
+}
+
+select {
+  appearance: none;
+}
+
+option {
+  background: #111;
+}
+
+.grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 35px;
+}
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.check {
+  flex-direction: row;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.check input {
+  width: auto;
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.submission button {
+  margin-top: 10px;
+
+  border: 0;
+
+  background: #f2f0e9;
+
+  color: #080808;
+
+  padding: 20px 22px;
+
+  text-align: left;
+
+  font: 12px "DM Mono";
+
+  cursor: pointer;
+
+  transition:
+    opacity .3s ease,
+    transform .4s cubic-bezier(.16, 1, .3, 1);
+}
+
+.submission button:hover {
+  opacity: .85;
+
+  transform: translateY(-2px);
+}
+
+.submission button span {
+  float: right;
+
+  margin-left: 80px;
+}
+
+
+/* =========================
+   SUCCESS
+========================= */
+
+.success {
+  border: 1px solid #444;
+
+  padding: 55px;
+}
+
+.success > span {
+  font-size: 38px;
+
+  font-weight: 700;
+
+  letter-spacing: -.04em;
+}
+
+.success p {
+  color: #999;
+
+  line-height: 1.6;
+
+  max-width: 500px;
+}
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal {
+  opacity: 0;
+
+  transform: translateY(35px);
+
+  transition:
+    opacity 1s cubic-bezier(.16, 1, .3, 1),
+    transform 1s cubic-bezier(.16, 1, .3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  border-top: 1px solid #2a2a2a;
+
+  padding: 25px 5vw;
+
+  display: flex;
+
+  justify-content: space-between;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  header {
+    height: 70px;
+
+    padding: 0 6vw;
+  }
+
+  .nav {
+    font-size: 10px;
+  }
+
+  .hero {
+    min-height: 75vh;
+
+    padding: 9vh 6vw;
+  }
+
+  .hero h1 {
+    font-size: clamp(68px, 19vw, 130px);
+  }
+
+  .hero p {
+    font-size: 16px;
+
+    margin-top: 45px;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  .info > div {
+    border-right: 0;
+
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .submission {
+    padding: 90px 6vw;
+  }
+
+  .section-title {
+    margin-bottom: 50px;
+  }
+
+  .section-title h2 {
+    font-size: 58px;
+  }
+
+  .success {
+    padding: 35px;
+  }
+
+  footer {
+    padding: 25px 6vw;
+
+    gap: 20px;
+
+    flex-direction: column;
+  }
+}
