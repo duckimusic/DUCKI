@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DUCKI — Demo Submissions</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div>
+<header>
+  <a class="logo" href="#">DUCKI<span>®</span></a>
+  <a class="nav" href="#submit">SUBMIT DEMO ↗</a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="eyebrow">DUCKI MUSIC / DEMO SUBMISSIONS</div>
+  <h1>WE<br><i>LISTEN.</i></h1>
+  <p>Send us your unreleased music. No essays. No hype. Just the track.</p>
+  <a class="cta" href="#submit">SUBMIT YOUR DEMO <span>→</span></a>
+</section>
+
+<section class="info">
+  <div><small>01</small><h2>WHAT WE WANT</h2><p>Brazilian funk, phonk, hard dance, experimental, electronic and anything with a strong identity.</p></div>
+  <div><small>02</small><h2>ONE TRACK</h2><p>Send your strongest unreleased track. Private SoundCloud, Drive or Dropbox links are fine.</p></div>
+  <div><small>03</small><h2>NO GUARANTEES</h2><p>We listen when we can. If the track fits, we'll contact you by email.</p></div>
+</section>
+
+<section id="submit" class="submission">
+  <div class="section-title"><span>SUBMISSION / 001</span><h2>SEND IT.</h2></div>
+  <form id="demoForm">
+    <label>ARTIST NAME *<input name="artist" required placeholder="Your artist name"></label>
+    <label>TRACK TITLE *<input name="title" required placeholder="Track title"></label>
+    <div class="grid">
+      <label>GENRE *
+        <select name="genre" required>
+          <option value="">Select</option><option>Brazilian Funk</option><option>Phonk</option>
+          <option>Hard Dance / Hardtekk</option><option>Electronic</option><option>Experimental</option><option>Other</option>
+        </select>
+      </label>
+      <label>BPM<input name="bpm" type="number" min="1" max="400" placeholder="e.g. 130"></label>
+    </div>
+    <label>PRIVATE TRACK LINK *<input name="link" type="url" required placeholder="https://soundcloud.com/..."></label>
+    <label>EMAIL *<input name="email" type="email" required placeholder="you@email.com"></label>
+    <label>SOCIAL LINK<input name="social" type="url" placeholder="Instagram / TikTok / SoundCloud"></label>
+    <label>MESSAGE<textarea name="message" rows="4" placeholder="Anything we should know?"></textarea></label>
+    <label class="check"><input type="checkbox" required> I own or control the rights to this submission.</label>
+    <button type="submit">SEND DEMO <span>↗</span></button>
+  </form>
+  <div id="success" class="success" hidden>
+    <span>DEMO RECEIVED.</span>
+    <p>Thanks for sending your track. If we're interested, we'll contact you via email.</p>
+    <button onclick="location.reload()">SEND ANOTHER</button>
+  </div>
+</section>
+</main>
+
+<footer><span>DUCKI®</span><span>DEMO SUBMISSIONS / 2026</span></footer>
+<script src="script.js"></script>
+</body>
+</html>
