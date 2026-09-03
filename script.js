@@ -2,57 +2,113 @@ const form = document.getElementById("demoForm");
 const success = document.getElementById("success");
 
 
+// =========================
 // FORM
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
+// =========================
 
-  const data = Object.fromEntries(new FormData(form));
+if (form && success) {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  console.log("DUCKI connection:", data);
+    const data = Object.fromEntries(new FormData(form));
 
-  form.hidden = true;
-  success.hidden = false;
+    console.log("DUCKI connection:", data);
 
-  document.getElementById("submit").scrollIntoView({
-    behavior: "smooth",
-    block: "start"
+    form.hidden = true;
+    success.hidden = false;
+
+    document.getElementById("submit").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
   });
-});
+}
 
 
+// =========================
+// LOGO PROTECTION
+// =========================
+
+const logo = document.querySelector(".logo");
+const logoImage = document.querySelector(".logo img");
+
+if (logo) {
+  // Disable right-click on logo
+  logo.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+  });
+
+  // Disable dragging
+  logo.addEventListener("dragstart", function (event) {
+    event.preventDefault();
+  });
+}
+
+if (logoImage) {
+  // Extra protection against dragging the PNG
+  logoImage.addEventListener("dragstart", function (event) {
+    event.preventDefault();
+  });
+
+  // Prevent right-click directly on the image
+  logoImage.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+  });
+}
+
+
+// =========================
 // SCROLL REVEAL
+// =========================
+
 const revealElements = document.querySelectorAll(
   ".info > div, .section-title, .submission form"
 );
 
-const observer = new IntersectionObserver(
-  function (entries) {
+if ("IntersectionObserver" in window) {
 
-    entries.forEach(function (entry) {
+  const observer = new IntersectionObserver(
+    function (entries) {
 
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
+      entries.forEach(function (entry) {
 
-    });
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
 
-  },
-  {
-    threshold: 0.15
-  }
-);
+          observer.unobserve(entry.target);
+        }
 
+      });
 
-revealElements.forEach(function (element) {
-
-  element.classList.add("reveal");
-  observer.observe(element);
-
-});
+    },
+    {
+      threshold: 0.15
+    }
+  );
 
 
+  revealElements.forEach(function (element) {
+
+    element.classList.add("reveal");
+
+    observer.observe(element);
+
+  });
+
+} else {
+
+  // Fallback for older browsers
+  revealElements.forEach(function (element) {
+    element.classList.add("visible");
+  });
+
+}
+
+
+// =========================
 // MAGNETIC BUTTON
+// =========================
+
 const buttons = document.querySelectorAll(".cta");
 
 buttons.forEach(function (button) {
@@ -61,8 +117,15 @@ buttons.forEach(function (button) {
 
     const rect = button.getBoundingClientRect();
 
-    const x = event.clientX - rect.left - rect.width / 2;
-    const y = event.clientY - rect.top - rect.height / 2;
+    const x =
+      event.clientX -
+      rect.left -
+      rect.width / 2;
+
+    const y =
+      event.clientY -
+      rect.top -
+      rect.height / 2;
 
     button.style.transform =
       `translate(${x * 0.08}px, ${y * 0.08}px)`;
@@ -72,7 +135,8 @@ buttons.forEach(function (button) {
 
   button.addEventListener("mouseleave", function () {
 
-    button.style.transform = "translate(0, 0)";
+    button.style.transform =
+      "translate(0, 0)";
 
   });
 
