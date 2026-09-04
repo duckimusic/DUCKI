@@ -16,17 +16,28 @@ if (form && success) {
 
     event.preventDefault();
 
+    if (form.dataset.submitting === "true") return;
+
     const submitButton =
       form.querySelector('button[type="submit"]');
 
     const originalText =
       submitButton.innerHTML;
 
+    form.dataset.submitting = "true";
+
     submitButton.disabled = true;
 
     submitButton.innerHTML =
       'SENDING <span>↗</span>';
 
+    // Remove previous error
+    const oldError =
+      form.querySelector(".form-error");
+
+    if (oldError) {
+      oldError.remove();
+    }
 
     const formData =
       new FormData(form);
@@ -50,6 +61,13 @@ if (form && success) {
           body: JSON.stringify(data)
         }
       );
+
+
+      if (!response.ok) {
+        throw new Error(
+          `HTTP ${response.status}`
+        );
+      }
 
 
       const result =
@@ -103,14 +121,30 @@ if (form && success) {
       );
 
 
+      form.dataset.submitting = "false";
+
       submitButton.disabled = false;
 
       submitButton.innerHTML =
         originalText;
 
 
-      alert(
-        "Something went wrong. Please try again."
+      const errorMessage =
+        document.createElement("div");
+
+      errorMessage.className =
+        "form-error";
+
+      errorMessage.setAttribute(
+        "role",
+        "alert"
+      );
+
+      errorMessage.textContent =
+        "Something went wrong. Please check your connection and try again.";
+
+      form.appendChild(
+        errorMessage
       );
 
     }
