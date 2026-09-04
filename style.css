@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   --mouse-x: 50vw;
@@ -39,6 +43,11 @@ body::before {
   z-index: 10;
 }
 
+
+/* =========================
+   HEADER
+========================= */
+
 header {
   height: 82px;
   border-bottom: 1px solid #2a2a2a;
@@ -71,7 +80,9 @@ header {
   -webkit-user-drag: none;
   pointer-events: auto;
   animation: duckiLogoIn .8s cubic-bezier(.16,1,.3,1) both;
-  transition: transform .45s cubic-bezier(.16,1,.3,1), opacity .3s ease;
+  transition:
+    transform .45s cubic-bezier(.16,1,.3,1),
+    opacity .3s ease;
 }
 
 .logo:hover img {
@@ -79,8 +90,15 @@ header {
 }
 
 @keyframes duckiLogoIn {
-  from { opacity: 0; transform: translateY(-10px) rotate(-6deg) scale(.9); }
-  to { opacity: 1; transform: translateY(0) rotate(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px) rotate(-6deg) scale(.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0) scale(1);
+  }
 }
 
 .nav,
@@ -100,10 +118,19 @@ footer,
   text-decoration: none;
   border-bottom: 1px solid #fff;
   padding-bottom: 3px;
-  transition: opacity .3s ease, border-color .3s ease;
+  transition:
+    opacity .3s ease,
+    border-color .3s ease;
 }
 
-.nav:hover { opacity: .5; }
+.nav:hover {
+  opacity: .5;
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
   min-height: 82vh;
@@ -116,9 +143,14 @@ footer,
   isolation: isolate;
 }
 
-.hero > * { position: relative; z-index: 1; }
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
 
-.eyebrow { margin-bottom: 28px; }
+.eyebrow {
+  margin-bottom: 28px;
+}
 
 .hero h1 {
   font-size: clamp(76px,16vw,220px);
@@ -138,8 +170,15 @@ footer,
 }
 
 @keyframes heroTitleIn {
-  from { opacity: 0; transform: translateY(45px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero p {
@@ -152,9 +191,21 @@ footer,
 }
 
 @keyframes heroTextIn {
-  from { opacity: 0; transform: translateY(25px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+
+/* =========================
+   HERO ORBIT
+========================= */
 
 .hero-orbit {
   position: absolute;
@@ -193,9 +244,21 @@ footer,
 }
 
 @keyframes orbitIn {
-  from { opacity: 0; transform: scale(.7) rotate(-20deg); }
-  to { opacity: 1; transform: scale(1) rotate(0); }
+  from {
+    opacity: 0;
+    transform: scale(.7) rotate(-20deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
 }
+
+
+/* =========================
+   CTA
+========================= */
 
 .cta {
   width: max-content;
@@ -205,7 +268,9 @@ footer,
   padding: 18px 22px;
   font: 12px "DM Mono";
   font-weight: 500;
-  transition: transform .45s cubic-bezier(.16,1,.3,1), opacity .3s ease;
+  transition:
+    transform .45s cubic-bezier(.16,1,.3,1),
+    opacity .3s ease;
 }
 
 .cta span {
@@ -214,8 +279,18 @@ footer,
   transition: transform .45s cubic-bezier(.16,1,.3,1);
 }
 
-.cta:hover { opacity: .9; }
-.cta:hover span { transform: translateX(6px); }
+.cta:hover {
+  opacity: .9;
+}
+
+.cta:hover span {
+  transform: translateX(6px);
+}
+
+
+/* =========================
+   SCROLL
+========================= */
 
 .scroll-hint {
   position: absolute;
@@ -245,9 +320,19 @@ footer,
 }
 
 @keyframes scrollLine {
-  0%, 30% { transform: translateX(-100%); }
-  60%, 100% { transform: translateX(100%); }
+  0%, 30% {
+    transform: translateX(-100%);
+  }
+
+  60%, 100% {
+    transform: translateX(100%);
+  }
 }
+
+
+/* =========================
+   INFO CARDS
+========================= */
 
 .info {
   display: grid;
@@ -267,10 +352,15 @@ footer,
   border-right: 1px solid #2a2a2a;
   background: transparent;
   cursor: pointer;
-  transition: background .5s ease, transform .5s cubic-bezier(.16,1,.3,1), padding .35s ease;
+  transition:
+    background .5s ease,
+    transform .5s cubic-bezier(.16,1,.3,1),
+    padding .35s ease;
 }
 
-.info-card:last-child { border-right: 0; }
+.info-card:last-child {
+  border-right: 0;
+}
 
 .info-card:hover,
 .info-card.active {
@@ -278,7 +368,9 @@ footer,
   transform: translateY(-3px);
 }
 
-.info-card.active { box-shadow: inset 0 2px 0 #f2f0e9; }
+.info-card.active {
+  box-shadow: inset 0 2px 0 #f2f0e9;
+}
 
 .info h2 {
   font-size: 15px;
@@ -302,7 +394,9 @@ footer,
 }
 
 .info-card:hover .card-action,
-.info-card.active .card-action { color: #f2f0e9; }
+.info-card.active .card-action {
+  color: #f2f0e9;
+}
 
 .card-action b {
   display: inline-block;
@@ -311,7 +405,14 @@ footer,
   transition: transform .3s ease;
 }
 
-.info-card:hover .card-action b { transform: translate(3px,-3px); }
+.info-card:hover .card-action b {
+  transform: translate(3px,-3px);
+}
+
+
+/* =========================
+   INTERACTION PANEL
+========================= */
 
 .interaction-panel {
   max-width: 1100px;
@@ -325,7 +426,9 @@ footer,
   opacity: 0;
 }
 
-.interaction-panel.visible { opacity: 1; }
+.interaction-panel.visible {
+  opacity: 1;
+}
 
 .interaction-copy {
   display: flex;
@@ -353,16 +456,20 @@ footer,
   white-space: nowrap;
 }
 
-.panel-pulse { animation: panelPulse .5s ease; }
+.panel-pulse {
+  animation: panelPulse .5s ease;
+}
 
 @keyframes panelPulse {
-  50% { transform: translateY(-4px); }
+  50% {
+    transform: translateY(-4px);
+  }
 }
 
 
 /* =========================
    SPOTIFY
-   ========================= */
+========================= */
 
 .spotify-section {
   max-width: 1100px;
@@ -370,36 +477,6 @@ footer,
   padding: 110px 5vw;
   border-bottom: 1px solid #2a2a2a;
   position: relative;
-}
-
-.spotify-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 55px;
-}
-
-.spotify-title {
-  margin: 0;
-  font-size: clamp(52px,8vw,95px);
-  line-height: .9;
-  letter-spacing: -.07em;
-  font-weight: 700;
-}
-
-.spotify-title i {
-  font-style: normal;
-  -webkit-text-stroke: 1px #f2f0e9;
-  color: transparent;
-}
-
-.spotify-label {
-  font: 11px "DM Mono", monospace;
-  letter-spacing: .08em;
-  color: #666;
-  white-space: nowrap;
-  padding-bottom: 7px;
 }
 
 .spotify-player {
@@ -424,25 +501,14 @@ footer,
 .spotify-player iframe {
   display: block;
   width: 100%;
+  height: 352px;
   border: 0;
   border-radius: 0;
 }
 
-.spotify-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.spotify-meta span {
-  font: 10px "DM Mono", monospace;
-  letter-spacing: .08em;
-  color: #555;
-}
-
 .spotify-link {
+  display: inline-block;
+  margin-top: 20px;
   color: #aaa;
   font: 10px "DM Mono", monospace;
   letter-spacing: .08em;
@@ -459,16 +525,68 @@ footer,
   border-color: #f2f0e9;
 }
 
-.spotify-section.reveal {
+
+/* =========================
+   YOUTUBE
+========================= */
+
+.youtube-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 110px 5vw;
+  border-bottom: 1px solid #2a2a2a;
+  position: relative;
+}
+
+.youtube-player {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #2a2a2a;
+  background: #101010;
+  overflow: hidden;
   transition:
-    opacity 1s cubic-bezier(.16,1,.3,1),
-    transform 1s cubic-bezier(.16,1,.3,1);
+    border-color .4s ease,
+    transform .45s cubic-bezier(.16,1,.3,1),
+    background .4s ease;
+}
+
+.youtube-player:hover {
+  border-color: #555;
+  background: #121212;
+  transform: translateY(-3px);
+}
+
+.youtube-player iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.youtube-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #aaa;
+  font: 10px "DM Mono", monospace;
+  letter-spacing: .08em;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+  padding-bottom: 4px;
+  transition:
+    color .3s ease,
+    border-color .3s ease;
+}
+
+.youtube-link:hover {
+  color: #f2f0e9;
+  border-color: #f2f0e9;
 }
 
 
 /* =========================
    SUBMISSION
-   ========================= */
+========================= */
 
 .submission {
   max-width: 900px;
@@ -476,7 +594,9 @@ footer,
   padding: 120px 5vw;
 }
 
-.section-title { margin-bottom: 65px; }
+.section-title {
+  margin-bottom: 65px;
+}
 
 .section-title h2 {
   font-size: clamp(52px,8vw,95px);
@@ -499,7 +619,9 @@ label {
   gap: 10px;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   width: 100%;
   border: 0;
   border-bottom: 1px solid #444;
@@ -509,18 +631,31 @@ input, select, textarea {
   font: 17px "Space Grotesk";
   outline: 0;
   border-radius: 0;
-  transition: border-color .3s ease, padding-left .3s ease;
+  transition:
+    border-color .3s ease,
+    padding-left .3s ease;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
   border-color: #fff;
   padding-left: 5px;
 }
 
-input::placeholder, textarea::placeholder { color: #555; }
+input::placeholder,
+textarea::placeholder {
+  color: #555;
+}
 
-select { appearance: none; cursor: pointer; }
-option { background: #111; }
+select {
+  appearance: none;
+  cursor: pointer;
+}
+
+option {
+  background: #111;
+}
 
 .grid {
   display: grid;
@@ -552,10 +687,14 @@ option { background: #111; }
   text-align: left;
   font: 12px "DM Mono";
   cursor: pointer;
-  transition: opacity .3s ease, transform .4s cubic-bezier(.16,1,.3,1);
+  transition:
+    opacity .3s ease,
+    transform .4s cubic-bezier(.16,1,.3,1);
 }
 
-.submission button:hover { opacity: .85; }
+.submission button:hover {
+  opacity: .85;
+}
 
 .submission button span {
   float: right;
@@ -563,7 +702,14 @@ option { background: #111; }
   transition: transform .4s cubic-bezier(.16,1,.3,1);
 }
 
-.submission button:hover span { transform: translateX(5px); }
+.submission button:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================
+   SUCCESS
+========================= */
 
 .success {
   border: 1px solid #444;
@@ -584,14 +730,28 @@ option { background: #111; }
 }
 
 @keyframes successIn {
-  from { opacity: 0; transform: translateY(25px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+
+/* =========================
+   REVEAL
+========================= */
 
 .reveal {
   opacity: 0;
   transform: translateY(35px);
-  transition: opacity 1s cubic-bezier(.16,1,.3,1), transform 1s cubic-bezier(.16,1,.3,1);
+  transition:
+    opacity 1s cubic-bezier(.16,1,.3,1),
+    transform 1s cubic-bezier(.16,1,.3,1);
 }
 
 .reveal.visible {
@@ -599,12 +759,22 @@ option { background: #111; }
   transform: translateY(0);
 }
 
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
   border-top: 1px solid #2a2a2a;
   padding: 25px 5vw;
   display: flex;
   justify-content: space-between;
 }
+
+
+/* =========================
+   CURSOR
+========================= */
 
 .cursor-dot,
 .cursor-glow {
@@ -634,7 +804,14 @@ footer {
   margin: 0;
 }
 
-.cursor-hover .cursor-dot { transform: scale(2.2); }
+.cursor-hover .cursor-dot {
+  transform: scale(2.2);
+}
+
+
+/* =========================
+   DUCKI TOAST
+========================= */
 
 .ducki-toast {
   position: fixed;
@@ -649,7 +826,9 @@ footer {
   letter-spacing: .12em;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .2s ease, transform .3s cubic-bezier(.16,1,.3,1);
+  transition:
+    opacity .2s ease,
+    transform .3s cubic-bezier(.16,1,.3,1);
 }
 
 .ducki-toast.show {
@@ -657,45 +836,83 @@ footer {
   transform: translate(-50%,-50%) scale(1);
 }
 
+
+/* =========================
+   QUACK
+========================= */
+
 body.quack-mode .hero h1 {
   animation: quackShake .12s linear 8;
 }
 
 @keyframes quackShake {
-  25% { transform: translateX(-5px) rotate(-.5deg); }
-  75% { transform: translateX(5px) rotate(.5deg); }
+  25% {
+    transform: translateX(-5px) rotate(-.5deg);
+  }
+
+  75% {
+    transform: translateX(5px) rotate(.5deg);
+  }
 }
 
+
+/* =========================
+   TOUCH DEVICES
+========================= */
+
 @media (pointer: coarse) {
+
   .cursor-dot,
-  .cursor-glow { display: none; }
+  .cursor-glow {
+    display: none;
+  }
 
   .hero-orbit {
     animation: none;
   }
+
 }
 
+
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 700px) {
+
   header {
     height: 70px;
     padding: 0 6vw;
   }
 
-  .logo { width: 75px; height: 45px; }
-  .logo img { width: 68px; }
-  .nav { font-size: 10px; }
+  .logo {
+    width: 75px;
+    height: 45px;
+  }
+
+  .logo img {
+    width: 68px;
+  }
+
+  .nav {
+    font-size: 10px;
+  }
+
 
   .hero {
     min-height: 75vh;
     padding: 9vh 6vw;
   }
 
-  .hero h1 { font-size: clamp(68px,19vw,130px); }
+  .hero h1 {
+    font-size: clamp(68px,19vw,130px);
+  }
 
   .hero p {
     font-size: 16px;
     margin-top: 45px;
   }
+
 
   .hero-orbit {
     width: 105px;
@@ -704,14 +921,21 @@ body.quack-mode .hero h1 {
     right: 6%;
   }
 
-  .hero-orbit span { font-size: 7px; width: 65px; }
+  .hero-orbit span {
+    font-size: 7px;
+    width: 65px;
+  }
+
 
   .scroll-hint {
     right: 6vw;
     bottom: 25px;
   }
 
-  .info { grid-template-columns: 1fr; }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
 
   .info-card {
     border-right: 0;
@@ -719,7 +943,10 @@ body.quack-mode .hero h1 {
     padding: 45px 6vw 50px;
   }
 
-  .info-card:last-child { border-bottom: 0; }
+  .info-card:last-child {
+    border-bottom: 0;
+  }
+
 
   .interaction-panel {
     grid-template-columns: 1fr;
@@ -731,60 +958,75 @@ body.quack-mode .hero h1 {
     width: max-content;
   }
 
+
   /* Spotify mobile */
 
   .spotify-section {
     padding: 90px 6vw;
   }
 
-  .spotify-header {
-    display: block;
-    margin-bottom: 45px;
-  }
-
-  .spotify-title {
-    font-size: 58px;
-  }
-
-  .spotify-label {
-    display: block;
-    margin-top: 22px;
-    padding-bottom: 0;
-  }
-
   .spotify-player {
     min-height: 152px;
   }
 
-  .spotify-meta {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 14px;
+  .spotify-player iframe {
+    height: 352px;
   }
+
+
+  /* YouTube mobile */
+
+  .youtube-section {
+    padding: 90px 6vw;
+  }
+
+  .youtube-player {
+    aspect-ratio: 16 / 9;
+  }
+
 
   .grid {
     grid-template-columns: 1fr;
     gap: 30px;
   }
 
+
   .submission {
     padding: 90px 6vw;
   }
 
-  .section-title { margin-bottom: 50px; }
-  .section-title h2 { font-size: 58px; }
+  .section-title {
+    margin-bottom: 50px;
+  }
 
-  .success { padding: 35px; }
+  .section-title h2 {
+    font-size: 58px;
+  }
+
+
+  .success {
+    padding: 35px;
+  }
+
 
   footer {
     padding: 25px 6vw;
     gap: 20px;
     flex-direction: column;
   }
+
 }
 
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+
+  html {
+    scroll-behavior: auto;
+  }
 
   *,
   *::before,
@@ -793,4 +1035,5 @@ body.quack-mode .hero h1 {
     animation-iteration-count: 1 !important;
     transition-duration: .01ms !important;
   }
+
 }
