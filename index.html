@@ -10,17 +10,24 @@
 <body>
 
   <div class="noise"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="ducki-toast" aria-live="polite">QUACK.</div>
 
   <header>
     <a class="logo" href="#" aria-label="DUCKI">
-  <img src="Ducki_LOGO_transparent.png" alt="DUCKI" draggable="false">
-</a>
-    <a class="nav" href="#submit">LET'S CONNECT ↗</a>
+      <img src="Ducki_LOGO_transparent.png" alt="DUCKI" draggable="false">
+    </a>
+    <a class="nav magnetic" href="#submit">LET'S CONNECT ↗</a>
   </header>
 
   <main>
 
-    <section class="hero">
+    <section class="hero" id="top">
+      <div class="hero-orbit" aria-hidden="true">
+        <span>CLICK / MOVE / EXPLORE</span>
+      </div>
+
       <div class="eyebrow">DUCKI / MUSIC &amp; CONNECTIONS</div>
 
       <h1>
@@ -33,41 +40,58 @@
         making interesting things.
       </p>
 
-      <a class="cta" href="#submit">
+      <a class="cta magnetic" href="#submit">
         SEND SOMETHING <span>→</span>
       </a>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span>SCROLL</span>
+        <span class="scroll-line"></span>
+      </div>
     </section>
 
 
     <section class="info">
 
-      <div>
+      <button class="info-card" type="button" data-card="01">
         <small>01</small>
         <h2>MAKE MUSIC</h2>
         <p>
           Tracks, remixes, experiments, unfinished ideas —
           if it sounds interesting, send it over.
         </p>
-      </div>
+        <span class="card-action">EXPLORE <b>↗</b></span>
+      </button>
 
-      <div>
+      <button class="info-card" type="button" data-card="02">
         <small>02</small>
         <h2>COLLABORATE</h2>
         <p>
           Looking for a producer, vocalist, artist,
           or someone to build a track with?
         </p>
-      </div>
+        <span class="card-action">CONNECT <b>↗</b></span>
+      </button>
 
-      <div>
+      <button class="info-card" type="button" data-card="03">
         <small>03</small>
         <h2>CONNECT</h2>
         <p>
           Got something you want to share?
           Send it over. Maybe we'll make something together.
         </p>
-      </div>
+        <span class="card-action">SEND IT <b>↗</b></span>
+      </button>
 
+    </section>
+
+    <section class="interaction-panel" aria-live="polite">
+      <span class="interaction-label">DUCKI / INTERACTION</span>
+      <div class="interaction-copy">
+        <strong id="interactionTitle">PICK A BOX.</strong>
+        <span id="interactionText">There is probably something interesting inside.</span>
+      </div>
+      <a href="#submit" id="interactionLink">LET'S GO ↗</a>
     </section>
 
 
@@ -82,23 +106,13 @@
 
         <label>
           NAME / ARTIST *
-          <input
-            name="artist"
-            required
-            placeholder="Your name or artist name"
-          >
+          <input name="artist" required placeholder="Your name or artist name">
         </label>
-
 
         <label>
           WHAT ARE YOU MAKING? *
-          <input
-            name="title"
-            required
-            placeholder="Track, project, idea..."
-          >
+          <input name="title" required placeholder="Track, project, idea...">
         </label>
-
 
         <div class="grid">
 
@@ -117,104 +131,62 @@
 
           <label>
             BPM
-            <input
-              name="bpm"
-              type="number"
-              min="1"
-              max="400"
-              placeholder="e.g. 130"
-            >
+            <input name="bpm" type="number" min="1" max="400" placeholder="e.g. 130">
           </label>
 
         </div>
 
-
         <label>
           LINK *
-          <input
-            name="link"
-            type="url"
-            required
-            placeholder="https://..."
-          >
+          <input name="link" type="url" required placeholder="https://...">
         </label>
-
 
         <label>
           EMAIL *
-          <input
-            name="email"
-            type="email"
-            required
-            placeholder="you@email.com"
-          >
+          <input name="email" type="email" required placeholder="you@email.com">
         </label>
-
 
         <label>
           SOCIAL / SOUNDCLOUD
-          <input
-            name="social"
-            type="url"
-            placeholder="https://..."
-          >
+          <input name="social" type="url" placeholder="https://...">
         </label>
-
 
         <label>
           TELL US ABOUT IT
-          <textarea
-            name="message"
-            rows="4"
-            placeholder="What's the idea?"
-          ></textarea>
+          <textarea name="message" rows="4" placeholder="What's the idea?"></textarea>
         </label>
 
+        <label class="check">
+          <input type="checkbox" name="confirmation" value="Everything is good to go." required>
+          Everything is good to go.
+        </label>
 
-<label class="check">
-  <input
-    type="checkbox"
-    name="confirmation"
-    value="Everything is good to go."
-    required
-  >
-  Everything is good to go.
-</label>
-
-        <button type="submit">
+        <button type="submit" class="magnetic">
           SEND IT <span>↗</span>
         </button>
 
       </form>
 
-
       <div id="success" class="success" hidden>
-
         <span>GOT IT.</span>
-
         <p>
           Your idea is somewhere in the duck pond now.
           If it clicks, we'll get back to you.
         </p>
-
         <button type="button" onclick="location.reload()">
           SEND SOMETHING ELSE
         </button>
-
       </div>
 
     </section>
 
   </main>
 
-
   <footer>
     <span>DUCKI®</span>
     <span>MUSIC / COLLABORATION / CONNECTIONS</span>
   </footer>
 
-
   <script src="script.js"></script>
-
 </body>
 </html>
