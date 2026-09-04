@@ -1,30 +1,44 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <link rel="icon" type="image/png" href="Ducki_LOGO_transparent.png">
 
-<meta name="description" content="DUCKI — Music, collaborations, experiments, and people making interesting things.">
-<meta name="theme-color" content="#0a0a0a">
-
-<meta property="og:title" content="DUCKI — A Duck With Ideas">
-<meta property="og:description" content="Music, collaborations, experiments, and people making interesting things.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="Ducki_LOGO_transparent.png">
-
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DUCKI — A Duck With Ideas">
-<meta name="twitter:description" content="Music, collaborations, experiments, and people making interesting things.">
-<meta name="twitter:image" content="Ducki_LOGO_transparent.png">
-  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="DUCKI — Music, collaborations, experiments, and people making interesting things."
+  >
+
+  <meta name="theme-color" content="#0a0a0a">
+
+  <meta property="og:title" content="DUCKI — A Duck With Ideas">
+  <meta
+    property="og:description"
+    content="Music, collaborations, experiments, and people making interesting things."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="Ducki_LOGO_transparent.png">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DUCKI — A Duck With Ideas">
+  <meta
+    name="twitter:description"
+    content="Music, collaborations, experiments, and people making interesting things."
+  >
+  <meta name="twitter:image" content="Ducki_LOGO_transparent.png">
+
   <title>DUCKI — A Duck With Ideas</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <div class="noise"></div>
+
   <div class="cursor-dot" aria-hidden="true"></div>
   <div class="cursor-glow" aria-hidden="true"></div>
 
@@ -32,65 +46,63 @@
     QUACK.
   </div>
 
-  <!-- SUBMIT SUCCESS ANIMATION -->
-  <div
-    class="submit-success"
-    id="submitSuccess"
-    aria-hidden="true"
-  >
-    <div class="submit-success-inner">
 
-      <div class="success-ring">
-        <svg
-          class="success-check"
-          viewBox="0 0 52 52"
-          aria-hidden="true"
-        >
-          <path
-            d="M14 27.5L22.5 36L39 17"
-          />
-        </svg>
-      </div>
-
-      <div class="success-label">
-        SENT.
-      </div>
-
-      <div class="success-sub">
-        YOUR IDEA IS IN THE POND.
-      </div>
-
-    </div>
-  </div>
-
+  <!-- HEADER -->
 
   <header>
 
-    <a class="logo" href="#" aria-label="DUCKI">
-
+    <a
+      class="logo"
+      href="index.html"
+      aria-label="DUCKI"
+    >
       <img
         src="Ducki_LOGO_transparent.png"
         alt="DUCKI"
         draggable="false"
       >
-
     </a>
 
-    <a
-      class="nav magnetic"
-      href="#submit"
-    >
-      LET'S CONNECT ↗
-    </a>
+
+    <nav class="main-nav">
+
+      <a href="index.html">
+        HOME
+      </a>
+
+      <a href="music.html">
+        MUSIC
+      </a>
+
+      <a href="about.html">
+        ABOUT
+      </a>
+
+      <a href="faq.html">
+        FAQ
+      </a>
+
+      <a
+        class="nav magnetic"
+        href="submit.html"
+      >
+        SUBMIT ↗
+      </a>
+
+    </nav>
 
   </header>
 
 
   <main>
 
+
     <!-- HERO -->
 
-    <section class="hero" id="top">
+    <section
+      class="hero"
+      id="top"
+    >
 
       <div
         class="hero-orbit"
@@ -101,33 +113,41 @@
         </span>
       </div>
 
+
       <div class="eyebrow">
         DUCKI / MUSIC &amp; CONNECTIONS
       </div>
+
 
       <h1>
         A DUCK<br>
         <i>WITH IDEAS.</i>
       </h1>
 
+
       <p>
         Music, collaborations, experiments, and people
         making interesting things.
       </p>
 
+
       <a
         class="cta magnetic"
-        href="#submit"
+        href="submit.html"
       >
         SEND SOMETHING
         <span>→</span>
       </a>
 
+
       <div
         class="scroll-hint"
         aria-hidden="true"
       >
-        <span>SCROLL</span>
+        <span>
+          SCROLL
+        </span>
+
         <span class="scroll-line"></span>
       </div>
 
@@ -138,13 +158,17 @@
 
     <section class="info">
 
-      <button
+
+      <!-- MUSIC -->
+
+      <a
         class="info-card"
-        type="button"
-        data-card="01"
+        href="music.html"
       >
 
-        <small>01</small>
+        <small>
+          01
+        </small>
 
         <h2>
           MAKE MUSIC
@@ -152,62 +176,68 @@
 
         <p>
           Tracks, remixes, experiments, unfinished ideas —
-          if it sounds interesting, send it over.
+          if it sounds interesting, check it out.
         </p>
 
         <span class="card-action">
           EXPLORE <b>↗</b>
         </span>
 
-      </button>
+      </a>
 
 
-      <button
+      <!-- ABOUT -->
+
+      <a
         class="info-card"
-        type="button"
-        data-card="02"
+        href="about.html"
       >
 
-        <small>02</small>
+        <small>
+          02
+        </small>
 
         <h2>
-          COLLABORATE
+          ABOUT DUCKI
         </h2>
 
         <p>
-          Looking for a producer, vocalist, artist,
-          or someone to build a track with?
+          A multi-genre artist, producer,
+          and a duck with ideas.
         </p>
 
         <span class="card-action">
-          CONNECT <b>↗</b>
+          DISCOVER <b>↗</b>
         </span>
 
-      </button>
+      </a>
 
 
-      <button
+      <!-- FAQ -->
+
+      <a
         class="info-card"
-        type="button"
-        data-card="03"
+        href="faq.html"
       >
 
-        <small>03</small>
+        <small>
+          03
+        </small>
 
         <h2>
-          CONNECT
+          FAQ
         </h2>
 
         <p>
-          Got something you want to share?
-          Send it over. Maybe we'll make something together.
+          Got questions about submissions,
+          collaborations, or how this whole thing works?
         </p>
 
         <span class="card-action">
-          SEND IT <b>↗</b>
+          READ MORE <b>↗</b>
         </span>
 
-      </button>
+      </a>
 
     </section>
 
@@ -223,6 +253,7 @@
         DUCKI / INTERACTION
       </span>
 
+
       <div class="interaction-copy">
 
         <strong id="interactionTitle">
@@ -235,8 +266,9 @@
 
       </div>
 
+
       <a
-        href="#submit"
+        href="submit.html"
         id="interactionLink"
       >
         LET'S GO ↗
@@ -245,302 +277,10 @@
     </section>
 
 
-    <!-- SPOTIFY -->
-
-    <section class="spotify-section">
-
-      <div class="section-title">
-
-        <span>
-          DUCKI / 002
-        </span>
-
-        <h2>
-          LISTEN<br>
-          TO THE DUCK.
-        </h2>
-
-      </div>
-
-
-      <div class="spotify-player">
-
-        <iframe
-          src="https://open.spotify.com/embed/artist/5SjUxYX73fVOYwSjiYAJsP?utm_source=generator"
-          width="100%"
-          height="352"
-          frameborder="0"
-          allowfullscreen
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy">
-        </iframe>
-
-      </div>
-
-
-      <a
-        class="spotify-link"
-        href="https://open.spotify.com/artist/5SjUxYX73fVOYwSjiYAJsP"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        OPEN SPOTIFY ↗
-      </a>
-
-    </section>
-
-
-    <!-- YOUTUBE -->
-
-    <section class="youtube-section">
-
-      <div class="section-title">
-
-        <span>
-          DUCKI / 003
-        </span>
-
-        <h2>
-          WATCH<br>
-          THE DUCK.
-        </h2>
-
-      </div>
-
-
-      <div class="youtube-player">
-
-        <iframe
-          src="https://www.youtube.com/embed/LNmbx-WNwQE"
-          title="DUCKI — YouTube"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
-
-      </div>
-
-
-      <a
-        class="youtube-link"
-        href="https://youtu.be/LNmbx-WNwQE"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        OPEN YOUTUBE ↗
-      </a>
-
-    </section>
-
-
-    <!-- SUBMISSION -->
-
-    <section
-      id="submit"
-      class="submission"
-    >
-
-      <div class="section-title">
-
-        <span>
-          CONNECT / 001
-        </span>
-
-        <h2>
-          LET'S MAKE<br>
-          SOMETHING.
-        </h2>
-
-      </div>
-
-
-      <form id="demoForm">
-
-        <label>
-          NAME / ARTIST *
-
-          <input
-            name="artist"
-            required
-            placeholder="Your name or artist name"
-          >
-        </label>
-
-
-        <label>
-          WHAT ARE YOU MAKING? *
-
-          <input
-            name="title"
-            required
-            placeholder="Track, project, idea..."
-          >
-        </label>
-
-
-        <div class="grid">
-
-          <label>
-            TYPE *
-
-            <select
-              name="genre"
-              required
-            >
-
-              <option value="">
-                Select
-              </option>
-
-              <option>
-                Music
-              </option>
-
-              <option>
-                Collaboration
-              </option>
-
-              <option>
-                Remix
-              </option>
-
-              <option>
-                Production
-              </option>
-
-              <option>
-                Experimental
-              </option>
-
-              <option>
-                Other
-              </option>
-
-            </select>
-
-          </label>
-
-
-          <label>
-            BPM
-
-            <input
-              name="bpm"
-              type="number"
-              min="1"
-              max="400"
-              placeholder="e.g. 130"
-            >
-
-          </label>
-
-        </div>
-
-
-        <label>
-          LINK *
-
-          <input
-            name="link"
-            type="url"
-            required
-            placeholder="https://..."
-          >
-
-        </label>
-
-
-        <label>
-          EMAIL *
-
-          <input
-            name="email"
-            type="email"
-            required
-            placeholder="you@email.com"
-          >
-
-        </label>
-
-
-        <label>
-          SOCIAL / SOUNDCLOUD
-
-          <input
-            name="social"
-            type="url"
-            placeholder="https://..."
-          >
-
-        </label>
-
-
-        <label>
-          TELL US ABOUT IT
-
-          <textarea
-            name="message"
-            rows="4"
-            placeholder="What's the idea?"
-          ></textarea>
-
-        </label>
-
-
-        <label class="check">
-
-          <input
-            type="checkbox"
-            name="confirmation"
-            value="Everything is good to go."
-            required
-          >
-
-          Everything is good to go.
-
-        </label>
-
-
-        <button
-          type="submit"
-          class="magnetic"
-        >
-          SEND IT
-          <span>↗</span>
-        </button>
-
-      </form>
-
-
-      <div
-        id="success"
-        class="success"
-        hidden
-      >
-
-        <span>
-          GOT IT.
-        </span>
-
-        <p>
-          Your idea is somewhere in the duck pond now.
-          If it clicks, we'll get back to you.
-        </p>
-
-        <button
-          type="button"
-          onclick="location.reload()"
-        >
-          SEND SOMETHING ELSE
-        </button>
-
-      </div>
-
-    </section>
-
   </main>
 
+
+  <!-- FOOTER -->
 
   <footer>
 
