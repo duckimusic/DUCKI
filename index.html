@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -14,404 +15,431 @@
   <div class="cursor-glow" aria-hidden="true"></div>
   <div class="ducki-toast" aria-live="polite">QUACK.</div>
 
+  <!-- SUBMIT SUCCESS ANIMATION -->
+
+  <div class="submit-overlay" id="submitOverlay" aria-hidden="true">
+    <div class="submit-animation">
+
+
+  <div class="submit-circle">
+    <svg class="checkmark" viewBox="0 0 52 52" aria-hidden="true">
+      <path d="M14 27 L22 35 L39 17"></path>
+    </svg>
+  </div>
+
+  <div class="submit-status">
+    <span id="submitStatus">SENT.</span>
+    <small id="submitStatusSub">Your idea is in the pond.</small>
+  </div>
+
+</div>
+
+
+  </div>
+
   <header>
     <a class="logo" href="#" aria-label="DUCKI">
       <img src="Ducki_LOGO_transparent.png" alt="DUCKI" draggable="false">
     </a>
 
-    <a class="nav magnetic" href="#submit">LET'S CONNECT ↗</a>
+
+<a class="nav magnetic" href="#submit">LET'S CONNECT ↗</a>
+
+
   </header>
 
   <main>
 
-    <!-- HERO -->
 
-    <section class="hero" id="top">
+<!-- HERO -->
 
-      <div class="hero-orbit" aria-hidden="true">
-        <span>CLICK / MOVE / EXPLORE</span>
-      </div>
+<section class="hero" id="top">
 
-      <div class="eyebrow">DUCKI / MUSIC &amp; CONNECTIONS</div>
+  <div class="hero-orbit" aria-hidden="true">
+    <span>CLICK / MOVE / EXPLORE</span>
+  </div>
 
-      <h1>
-        A DUCK<br>
-        <i>WITH IDEAS.</i>
-      </h1>
+  <div class="eyebrow">DUCKI / MUSIC &amp; CONNECTIONS</div>
 
-      <p>
-        Music, collaborations, experiments, and people
-        making interesting things.
-      </p>
+  <h1>
+    A DUCK<br>
+    <i>WITH IDEAS.</i>
+  </h1>
 
-      <a class="cta magnetic" href="#submit">
-        SEND SOMETHING <span>→</span>
-      </a>
+  <p>
+    Music, collaborations, experiments, and people
+    making interesting things.
+  </p>
 
-      <div class="scroll-hint" aria-hidden="true">
-        <span>SCROLL</span>
-        <span class="scroll-line"></span>
-      </div>
+  <a class="cta magnetic" href="#submit">
+    SEND SOMETHING <span>→</span>
+  </a>
 
-    </section>
+  <div class="scroll-hint" aria-hidden="true">
+    <span>SCROLL</span>
+    <span class="scroll-line"></span>
+  </div>
 
+</section>
 
-    <!-- INFO CARDS -->
 
-    <section class="info">
+<!-- INFO CARDS -->
 
-      <button class="info-card" type="button" data-card="01">
-        <small>01</small>
+<section class="info">
 
-        <h2>MAKE MUSIC</h2>
+  <button class="info-card" type="button" data-card="01">
+    <small>01</small>
 
-        <p>
-          Tracks, remixes, experiments, unfinished ideas —
-          if it sounds interesting, send it over.
-        </p>
+    <h2>MAKE MUSIC</h2>
 
-        <span class="card-action">
-          EXPLORE <b>↗</b>
-        </span>
-      </button>
+    <p>
+      Tracks, remixes, experiments, unfinished ideas —
+      if it sounds interesting, send it over.
+    </p>
 
+    <span class="card-action">
+      EXPLORE <b>↗</b>
+    </span>
+  </button>
 
-      <button class="info-card" type="button" data-card="02">
-        <small>02</small>
 
-        <h2>COLLABORATE</h2>
+  <button class="info-card" type="button" data-card="02">
+    <small>02</small>
 
-        <p>
-          Looking for a producer, vocalist, artist,
-          or someone to build a track with?
-        </p>
+    <h2>COLLABORATE</h2>
 
-        <span class="card-action">
-          CONNECT <b>↗</b>
-        </span>
-      </button>
+    <p>
+      Looking for a producer, vocalist, artist,
+      or someone to build a track with?
+    </p>
 
+    <span class="card-action">
+      CONNECT <b>↗</b>
+    </span>
+  </button>
 
-      <button class="info-card" type="button" data-card="03">
-        <small>03</small>
 
-        <h2>CONNECT</h2>
+  <button class="info-card" type="button" data-card="03">
+    <small>03</small>
 
-        <p>
-          Got something you want to share?
-          Send it over. Maybe we'll make something together.
-        </p>
+    <h2>CONNECT</h2>
 
-        <span class="card-action">
-          SEND IT <b>↗</b>
-        </span>
-      </button>
+    <p>
+      Got something you want to share?
+      Send it over. Maybe we'll make something together.
+    </p>
 
-    </section>
+    <span class="card-action">
+      SEND IT <b>↗</b>
+    </span>
+  </button>
 
+</section>
 
-    <!-- INTERACTION -->
 
-    <section class="interaction-panel" aria-live="polite">
+<!-- INTERACTION -->
 
-      <span class="interaction-label">
-        DUCKI / INTERACTION
-      </span>
+<section class="interaction-panel" aria-live="polite">
 
-      <div class="interaction-copy">
+  <span class="interaction-label">
+    DUCKI / INTERACTION
+  </span>
 
-        <strong id="interactionTitle">
-          PICK A BOX.
-        </strong>
+  <div class="interaction-copy">
 
-        <span id="interactionText">
-          There is probably something interesting inside.
-        </span>
+    <strong id="interactionTitle">
+      PICK A BOX.
+    </strong>
 
-      </div>
+    <span id="interactionText">
+      There is probably something interesting inside.
+    </span>
 
-      <a href="#submit" id="interactionLink">
-        LET'S GO ↗
-      </a>
+  </div>
 
-    </section>
+  <a href="#submit" id="interactionLink">
+    LET'S GO ↗
+  </a>
 
+</section>
 
-    <!-- SPOTIFY -->
 
-    <section class="spotify-section">
+<!-- SPOTIFY -->
 
-      <div class="section-title">
-        <span>DUCKI / 002</span>
+<section class="spotify-section">
 
-        <h2>
-          LISTEN<br>
-          TO THE DUCK.
-        </h2>
-      </div>
+  <div class="section-title">
+    <span>DUCKI / 002</span>
 
+    <h2>
+      LISTEN<br>
+      TO THE DUCK.
+    </h2>
+  </div>
 
-      <div class="spotify-player">
 
-        <iframe
-          src="https://open.spotify.com/embed/artist/5SjUxYX73fVOYwSjiYAJsP?utm_source=generator"
-          width="100%"
-          height="352"
-          frameborder="0"
-          allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy">
-        </iframe>
+  <div class="spotify-player">
 
-      </div>
+    <iframe
+      src="https://open.spotify.com/embed/artist/5SjUxYX73fVOYwSjiYAJsP?utm_source=generator"
+      width="100%"
+      height="352"
+      frameborder="0"
+      allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
 
+  </div>
 
-      <a
-        class="spotify-link"
-        href="https://open.spotify.com/artist/5SjUxYX73fVOYwSjiYAJsP"
-        target="_blank"
-        rel="noopener noreferrer">
 
-        OPEN SPOTIFY ↗
+  <a
+    class="spotify-link"
+    href="https://open.spotify.com/artist/5SjUxYX73fVOYwSjiYAJsP"
+    target="_blank"
+    rel="noopener noreferrer">
 
-      </a>
+    OPEN SPOTIFY ↗
 
-    </section>
+  </a>
 
+</section>
 
-    <!-- YOUTUBE -->
 
-    <section class="youtube-section">
+<!-- YOUTUBE -->
 
-      <div class="section-title">
+<section class="youtube-section">
 
-        <span>DUCKI / 003</span>
+  <div class="section-title">
 
-        <h2>
-          WATCH<br>
-          THE DUCK.
-        </h2>
+    <span>DUCKI / 003</span>
 
-      </div>
+    <h2>
+      WATCH<br>
+      THE DUCK.
+    </h2>
 
+  </div>
 
-      <div class="youtube-player">
 
-        <iframe
-          src="https://www.youtube.com/embed/LNmbx-WNwQE"
-          title="DUCKI — YouTube"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
+  <div class="youtube-player">
 
-      </div>
+    <iframe
+      src="https://www.youtube.com/embed/LNmbx-WNwQE"
+      title="DUCKI — YouTube"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
 
+  </div>
 
-      <a
-        class="youtube-link"
-        href="https://youtu.be/LNmbx-WNwQE"
-        target="_blank"
-        rel="noopener noreferrer">
 
-        OPEN YOUTUBE ↗
+  <a
+    class="youtube-link"
+    href="https://youtu.be/LNmbx-WNwQE"
+    target="_blank"
+    rel="noopener noreferrer">
 
-      </a>
+    OPEN YOUTUBE ↗
 
-    </section>
+  </a>
 
+</section>
 
-    <!-- SUBMISSION -->
 
-    <section id="submit" class="submission">
+<!-- SUBMISSION -->
 
-      <div class="section-title">
+<section id="submit" class="submission">
 
-        <span>CONNECT / 001</span>
+  <div class="section-title">
 
-        <h2>
-          LET'S MAKE<br>
-          SOMETHING.
-        </h2>
+    <span>CONNECT / 001</span>
 
-      </div>
+    <h2>
+      LET'S MAKE<br>
+      SOMETHING.
+    </h2>
 
+  </div>
 
-      <form id="demoForm">
 
-        <label>
-          NAME / ARTIST *
+  <form id="demoForm">
 
-          <input
-            name="artist"
-            required
-            placeholder="Your name or artist name">
-        </label>
+    <label>
+      NAME / ARTIST *
 
+      <input
+        name="artist"
+        required
+        placeholder="Your name or artist name">
+    </label>
 
-        <label>
-          WHAT ARE YOU MAKING? *
 
-          <input
-            name="title"
-            required
-            placeholder="Track, project, idea...">
-        </label>
+    <label>
+      WHAT ARE YOU MAKING? *
 
+      <input
+        name="title"
+        required
+        placeholder="Track, project, idea...">
+    </label>
 
-        <div class="grid">
 
-          <label>
-            TYPE *
+    <div class="grid">
 
-            <select name="genre" required>
+      <label>
+        TYPE *
 
-              <option value="">
-                Select
-              </option>
+        <select name="genre" required>
 
-              <option>
-                Music
-              </option>
+          <option value="">
+            Select
+          </option>
 
-              <option>
-                Collaboration
-              </option>
+          <option>
+            Music
+          </option>
 
-              <option>
-                Remix
-              </option>
+          <option>
+            Collaboration
+          </option>
 
-              <option>
-                Production
-              </option>
+          <option>
+            Remix
+          </option>
 
-              <option>
-                Experimental
-              </option>
+          <option>
+            Production
+          </option>
 
-              <option>
-                Other
-              </option>
+          <option>
+            Experimental
+          </option>
 
-            </select>
+          <option>
+            Other
+          </option>
 
-          </label>
+        </select>
 
+      </label>
 
-          <label>
-            BPM
 
-            <input
-              name="bpm"
-              type="number"
-              min="1"
-              max="400"
-              placeholder="e.g. 130">
-          </label>
+      <label>
+        BPM
 
-        </div>
+        <input
+          name="bpm"
+          type="number"
+          min="1"
+          max="400"
+          placeholder="e.g. 130">
+      </label>
 
+    </div>
 
-        <label>
-          LINK *
 
-          <input
-            name="link"
-            type="url"
-            required
-            placeholder="https://...">
-        </label>
+    <label>
+      LINK *
 
+      <input
+        name="link"
+        type="url"
+        required
+        placeholder="https://...">
+    </label>
 
-        <label>
-          EMAIL *
 
-          <input
-            name="email"
-            type="email"
-            required
-            placeholder="you@email.com">
-        </label>
+    <label>
+      EMAIL *
 
+      <input
+        name="email"
+        type="email"
+        required
+        placeholder="you@email.com">
+    </label>
 
-        <label>
-          SOCIAL / SOUNDCLOUD
 
-          <input
-            name="social"
-            type="url"
-            placeholder="https://...">
-        </label>
+    <label>
+      SOCIAL / SOUNDCLOUD
 
+      <input
+        name="social"
+        type="url"
+        placeholder="https://...">
+    </label>
 
-        <label>
-          TELL US ABOUT IT
 
-          <textarea
-            name="message"
-            rows="4"
-            placeholder="What's the idea?"></textarea>
-        </label>
+    <label>
+      TELL US ABOUT IT
 
+      <textarea
+        name="message"
+        rows="4"
+        placeholder="What's the idea?"></textarea>
+    </label>
 
-        <label class="check">
 
-          <input
-            type="checkbox"
-            name="confirmation"
-            value="Everything is good to go."
-            required>
+    <label class="check">
 
-          Everything is good to go.
+      <input
+        type="checkbox"
+        name="confirmation"
+        value="Everything is good to go."
+        required>
 
-        </label>
+      Everything is good to go.
 
+    </label>
 
-        <button type="submit" class="magnetic">
 
-          SEND IT <span>↗</span>
+    <button type="submit" class="magnetic">
 
-        </button>
+      SEND IT <span>↗</span>
 
-      </form>
+    </button>
 
+  </form>
 
-      <div id="success" class="success" hidden>
 
-        <span>GOT IT.</span>
+  <div id="success" class="success" hidden>
 
-        <p>
-          Your idea is somewhere in the duck pond now.
-          If it clicks, we'll get back to you.
-        </p>
+    <span>GOT IT.</span>
 
-        <button
-          type="button"
-          onclick="location.reload()">
+    <p>
+      Your idea is somewhere in the duck pond now.
+      If it clicks, we'll get back to you.
+    </p>
 
-          SEND SOMETHING ELSE
+    <button
+      type="button"
+      onclick="location.reload()">
 
-        </button>
+      SEND SOMETHING ELSE
 
-      </div>
+    </button>
 
-    </section>
+  </div>
+
+</section>
+
 
   </main>
 
-
   <footer>
 
-    <span>DUCKI®</span>
 
-    <span>
-      MUSIC / COLLABORATION / CONNECTIONS
-    </span>
+<span>DUCKI®</span>
+
+<span>
+  MUSIC / COLLABORATION / CONNECTIONS
+</span>
+
 
   </footer>
-
 
   <script src="script.js"></script>
 
