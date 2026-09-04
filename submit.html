@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/png" href="Ducki_LOGO_transparent.png">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="DUCKI — Submit your music, collaboration, experiment, or idea."
+  >
+
+  <meta name="theme-color" content="#0a0a0a">
+
+  <meta property="og:title" content="DUCKI — Submit Something">
+  <meta
+    property="og:description"
+    content="Send Ducki your music, collaboration, experiment, or weird idea."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="Ducki_LOGO_transparent.png">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DUCKI — Submit Something">
+  <meta
+    name="twitter:description"
+    content="Send Ducki your music, collaboration, experiment, or weird idea."
+  >
+  <meta name="twitter:image" content="Ducki_LOGO_transparent.png">
+
+  <title>DUCKI — Submit Something</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <div class="noise"></div>
+
+  <div
+    class="cursor-dot"
+    aria-hidden="true"
+  ></div>
+
+  <div
+    class="cursor-glow"
+    aria-hidden="true"
+  ></div>
+
+
+  <div
+    class="ducki-toast"
+    aria-live="polite"
+  >
+    QUACK.
+  </div>
+
+
+  <!-- SUBMIT SUCCESS ANIMATION -->
+
+  <div
+    class="submit-success"
+    id="submitSuccess"
+    aria-hidden="true"
+  >
+
+    <div class="submit-success-inner">
+
+      <div class="success-ring">
+
+        <svg
+          class="success-check"
+          viewBox="0 0 52 52"
+          aria-hidden="true"
+        >
+
+          <path
+            d="M14 27.5L22.5 36L39 17"
+          />
+
+        </svg>
+
+      </div>
+
+
+      <div class="success-label">
+        SENT.
+      </div>
+
+
+      <div class="success-sub">
+        YOUR IDEA IS IN THE POND.
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- HEADER -->
+
+  <header>
+
+    <a
+      class="logo"
+      href="index.html"
+      aria-label="DUCKI"
+    >
+
+      <img
+        src="Ducki_LOGO_transparent.png"
+        alt="DUCKI"
+        draggable="false"
+      >
+
+    </a>
+
+
+    <nav class="main-nav">
+
+      <a href="index.html">
+        HOME
+      </a>
+
+      <a href="music.html">
+        MUSIC
+      </a>
+
+      <a href="about.html">
+        ABOUT
+      </a>
+
+      <a href="faq.html">
+        FAQ
+      </a>
+
+      <a
+        class="nav magnetic"
+        href="submit.html"
+      >
+        SUBMIT ↗
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- SUBMISSION -->
+
+    <section
+      id="submit"
+      class="submission"
+    >
+
+      <div class="section-title">
+
+        <span>
+          CONNECT / 001
+        </span>
+
+        <h1>
+          LET'S MAKE<br>
+          SOMETHING.
+        </h1>
+
+      </div>
+
+
+      <form id="demoForm">
+
+
+        <!-- NAME -->
+
+        <label>
+
+          NAME / ARTIST *
+
+          <input
+            name="artist"
+            required
+            placeholder="Your name or artist name"
+          >
+
+        </label>
+
+
+        <!-- TITLE -->
+
+        <label>
+
+          WHAT ARE YOU MAKING? *
+
+          <input
+            name="title"
+            required
+            placeholder="Track, project, idea..."
+          >
+
+        </label>
+
+
+        <!-- TYPE + BPM -->
+
+        <div class="grid">
+
+
+          <label>
+
+            TYPE *
+
+            <select
+              name="genre"
+              required
+            >
+
+              <option value="">
+                Select
+              </option>
+
+              <option>
+                Music
+              </option>
+
+              <option>
+                Collaboration
+              </option>
+
+              <option>
+                Remix
+              </option>
+
+              <option>
+                Production
+              </option>
+
+              <option>
+                Experimental
+              </option>
+
+              <option>
+                Other
+              </option>
+
+            </select>
+
+          </label>
+
+
+          <label>
+
+            BPM
+
+            <input
+              name="bpm"
+              type="number"
+              min="1"
+              max="400"
+              placeholder="e.g. 130"
+            >
+
+          </label>
+
+        </div>
+
+
+        <!-- LINK -->
+
+        <label>
+
+          LINK *
+
+          <input
+            name="link"
+            type="url"
+            required
+            placeholder="https://..."
+          >
+
+        </label>
+
+
+        <!-- EMAIL -->
+
+        <label>
+
+          EMAIL *
+
+          <input
+            name="email"
+            type="email"
+            required
+            placeholder="you@email.com"
+          >
+
+        </label>
+
+
+        <!-- SOCIAL -->
+
+        <label>
+
+          SOCIAL / SOUNDCLOUD
+
+          <input
+            name="social"
+            type="url"
+            placeholder="https://..."
+          >
+
+        </label>
+
+
+        <!-- MESSAGE -->
+
+        <label>
+
+          TELL US ABOUT IT
+
+          <textarea
+            name="message"
+            rows="4"
+            placeholder="What's the idea?"
+          ></textarea>
+
+        </label>
+
+
+        <!-- CONFIRMATION -->
+
+        <label class="check">
+
+          <input
+            type="checkbox"
+            name="confirmation"
+            value="Everything is good to go."
+            required
+          >
+
+          Everything is good to go.
+
+        </label>
+
+
+        <!-- SUBMIT -->
+
+        <button
+          type="submit"
+          class="magnetic"
+        >
+
+          SEND IT
+
+          <span>
+            ↗
+          </span>
+
+        </button>
+
+
+      </form>
+
+
+      <!-- SUCCESS -->
+
+      <div
+        id="success"
+        class="success"
+        hidden
+      >
+
+        <span>
+          GOT IT.
+        </span>
+
+
+        <p>
+          Your idea is somewhere in the duck pond now.
+          If it clicks, we'll get back to you.
+        </p>
+
+
+        <button
+          type="button"
+          onclick="location.reload()"
+        >
+          SEND SOMETHING ELSE
+        </button>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <span>
+      DUCKI®
+    </span>
+
+    <span>
+      MUSIC / COLLABORATION / CONNECTIONS
+    </span>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
