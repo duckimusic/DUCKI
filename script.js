@@ -1,7 +1,7 @@
 const form = document.getElementById("demoForm");
 const success = document.getElementById("success");
 
-const GOOGLE_SCRIPT_URL = "INSERT LINK HERE";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzgRCYcl69q8725JOmcyYHbNBcbXtMdZhkgYhn9iz8WYSxnjEJJlO1VWVs_xTB6hWkn/exec";
 
 /* =========================
    FORM SUBMISSION
