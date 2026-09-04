@@ -1110,6 +1110,13 @@ PAGE HERO
   -webkit-text-stroke: 1px #f2f0e9;
 }
 
+.page-hero p {
+  max-width: 480px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #999;
+  margin: 55px 0 0;
+}
 
 /* =========================
 MOBILE NAV + FAQ
